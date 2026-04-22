@@ -234,6 +234,22 @@ body {
   border: 1px solid var(--border);
 }
 .pill strong { font-weight: 600; color: var(--text); }
+
+/* Signature */
+.signature {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.signature a {
+  font-size: 12px;
+  color: var(--faint);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+.signature a:hover { color: var(--muted); }
 </style>
 </head>
 <body>
@@ -281,6 +297,10 @@ body {
       <button class="btn" onclick="doScale()">Scale</button>
     </div>
     <div id="pills" class="pills"></div>
+  </div>
+
+  <div class="signature">
+    <a href="https://creatis.in/pages/stack" target="_blank" rel="noopener">Built by The Creatis Stack</a>
   </div>
 
 </div>
@@ -353,8 +373,6 @@ function findBestMix(target) {
   }
   return best;
 }
-
-
 
 function showCustom(hex, name, recipeHtml) {
   if (activeEl) { activeEl.classList.remove("selected"); activeEl = null; }
